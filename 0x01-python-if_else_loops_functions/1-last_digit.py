@@ -1,13 +1,6 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-digit = abs(number) % 10
-if number < 0:
-    digit = -digit
-print(f"Last digit of {number:d} is {digit:d} and is ", end="")
-if digit > 5:
-    print("greater than 5")
-elif digit == 0:
-    print("0")
-else:
-    print("less than 6 and not 0")
+# Author - Godswill Kalu
+
+"""Print numbers 0 to 98 in decimal and hexadecimal."""
+for number in range(0, 99):
+    print("{} = {}".format(number, hex(number)))

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for row in matrix:
-        for col in row:
-            print("{:d}".format(col), end=" " if col != row[-1] else "")
-        print()
+def multiple_returns(sentence):
+    my_tuple = ()
+    if len(sentence) == 0:
+        my_tuple = 0, "None"
+    else:
+        my_tuple = len(sentence), sentence[0]
+    return my_tuple

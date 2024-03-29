@@ -17,5 +17,6 @@ def fetch_url(url):
         print(f"Error code: {e.code}")
 
 if __name__ == "__main__":
+
     url = sys.argv[1]
     fetch_url(url)

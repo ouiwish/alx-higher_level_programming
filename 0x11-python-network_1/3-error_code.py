@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """error code"""
-import urllib.request
-import urllib.error
+from urllib import request, error
 import sys
 
 if __name__ == "__main__":

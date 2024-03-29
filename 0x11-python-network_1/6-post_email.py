@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""post email"""
-import requests
+"""A script that:
+- takes in a URL,
+- sends a request to the URL and displays the value
+- of the X-Request-Id variable found in the header ofthe response.
+"""
 import sys
-
+import urllib.request
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email = sys.argv[2]
 
-    data = {'email': email}
-    response = requests.post(url, data=data)
-    print(response.text)
-    print("Your email is:", email)
-    send_post_request(url, email)
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))

@@ -5,10 +5,12 @@
 - takes email as a parameter
 - displays the body of the response
 """
+
 import sys
 from urllib import parse, request
 
-if __name__ == "__main__":
+if __name__ == "__main__":\
+
     url = sys.argv[1]
     value = {"email": sys.argv[2]}
     data = parse.urlencoded(value).encode("ascii")

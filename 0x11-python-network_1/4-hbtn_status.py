@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""fetches https://intranet.hbtn.io/status."""
+"""fetches https://intranet.hbtn.io/status"""
 import requests
 
-if __name__ == "__main__":
-    r = requests.get("https://intranet.hbtn.io/status")
+def fetch_status():
+    url = "https://alx-intranet.hbtn.io/status"
+    response = requests.get(url)
+    body = response.text
+
     print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    print("\t- type:", type(body))
+    print("\t- content:", body)
+
+if __name__ == "__main__":
+    fetch_status()

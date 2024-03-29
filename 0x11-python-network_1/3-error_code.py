@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""error code"""
 
 if __name__ == "__main__":
     import sys

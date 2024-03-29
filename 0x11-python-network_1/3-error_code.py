@@ -1,12 +1,8 @@
 #!/usr/bin/python3
 """error code"""
-
 import urllib.request
 import urllib.error
 import sys
-
-def fetch_url(url):
-
 
 if __name__ == "__main__":
     url = sys.argv[1]

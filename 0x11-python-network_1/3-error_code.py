@@ -1,19 +1,10 @@
-import urllib.request
-import urllib.error
-import sys
-
-def fetch_url(url):
-    try:
-        with urllib.request.urlopen(url) as response:
-            body = response.read().decode('utf-8')
-            print(body)
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
-
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <URL>")
-        sys.exit(1)
+    import sys
+    from urllib import request, error
 
-    url = sys.argv[1]
-    fetch_url(url)
+    try:
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)
+        print(er.read().decode('UTF-8'))  # Print the error message as well
